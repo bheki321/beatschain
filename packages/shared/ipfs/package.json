@@ -1,0 +1,10 @@
+{
+  "name": "@beats/shared-ipfs",
+  "version": "0.1.0",
+  "private": true,
+  "main": "index.js",
+  "scripts": {
+    "build": "echo \"No build needed for shared library\" && exit 0"
+  },
+  "dependencies": {}
+}
