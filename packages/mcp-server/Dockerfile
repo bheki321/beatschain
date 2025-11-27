@@ -3,13 +3,13 @@ FROM node:20-alpine
 WORKDIR /app
 
 # Copy package files
-COPY packages/mcp-server/package*.json ./
+COPY package*.json ./
 
 # Install production dependencies
-RUN npm ci --production
+RUN npm install --production --legacy-peer-deps
 
 # Copy source code
-COPY packages/mcp-server/ ./
+COPY . ./
 
 # Ensure uploads dir permissions (created at runtime if missing)
 RUN mkdir -p uploads && chown -R node:node /app
