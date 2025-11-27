@@ -6,7 +6,7 @@ WORKDIR /app
 COPY packages/mcp-server/package*.json ./
 
 # Install production dependencies
-RUN npm ci --production
+RUN npm install --production --legacy-peer-deps
 
 # Copy source code
 COPY packages/mcp-server/ ./
